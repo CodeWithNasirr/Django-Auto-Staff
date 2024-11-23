@@ -22,6 +22,6 @@ class Command(BaseCommand):
             reader=csv.DictReader(f)
             for row in reader:
                 # data={key:value for key,value in row.items() if key in model_field}
-                models.objects.create(**row)
-                # models.objects.all().delete()
+                #models.objects.create(**row)
+                models.objects.all().delete()
         self.stdout.write(self.style.SUCCESS('Insert Data Sucessfully '))

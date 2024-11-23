@@ -8,6 +8,9 @@ def import_data_task(absolute_path, model_name):
     except Exception as e:
         raise e
     # Notify the user by email
-    send_email() 
+    subject='TestMail'
+    message="Your Data Imported Sucessfully"
+    email = "sknasiruddin665@gmail.com"
+    send_email([email],subject,message) 
     return 'Data Imported Succesfully'
         

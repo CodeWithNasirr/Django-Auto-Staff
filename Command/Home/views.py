@@ -5,7 +5,7 @@ from django.core.management import call_command,CommandError
 from django.db import transaction
 from django.core.mail import send_mail
 from Upload.models import upload
-from Home.task import import_data_task
+from Home.task import import_data_task 
 from Home.utils import check_csv_error
 
 
