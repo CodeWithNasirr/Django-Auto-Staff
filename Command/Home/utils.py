@@ -1,7 +1,9 @@
 from django.apps import apps
 from django.core.management import CommandError
 import csv
-
+from datetime import datetime
+import os
+from django.conf import settings
 # Function to get all models except default ones
 def get_all_models():
     """
@@ -57,13 +59,14 @@ def check_csv_error(file_path, model):
     
     # Extract field names from the model, excluding the 'id' field
     model_field = [field.name for field in models._meta.fields if field.name != 'id']
-
+    # print(F"Model_field- {model_field}")
     try:
         # Open the CSV file for reading
         with open(file_path, 'r') as f:
             reader = csv.DictReader(f)
             # Extract the headers from the CSV file, stripping any extra spaces
             csv_header = [header.strip() for header in reader.fieldnames]
+            # print(csv_header)
 
             # Compare CSV headers with model fields
             if csv_header != model_field:
@@ -76,3 +79,13 @@ def check_csv_error(file_path, model):
     
     # Return the matched model if validation is successful
     return models
+
+
+
+
+
+def generate_csv_file(models):
+    current = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    export_dirs=os.path.join(settings.MEDIA_ROOT,"Export")
+    file_path=os.path.join(export_dirs,f"Export-{models.__name__}-Data_{current}.csv")
+    return file_path

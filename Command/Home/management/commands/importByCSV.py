@@ -9,7 +9,7 @@ class Command(BaseCommand):
         parser.add_argument('file_path',type=str,help="Path to Csv File ")
         parser.add_argument('model_name',type=str,help="Path to Csv File ")
 
-    def handle(self, *args, **options):
+    def handle(self, *args, **options): 
         file_path=options['file_path']#this is for getting argument
         model=options['model_name'].capitalize()
         # print(model)
@@ -22,6 +22,6 @@ class Command(BaseCommand):
             reader=csv.DictReader(f)
             for row in reader:
                 # data={key:value for key,value in row.items() if key in model_field}
-                #models.objects.create(**row)
-                models.objects.all().delete()
+                models.objects.create(**row)
+                # models.objects.all().delete()
         self.stdout.write(self.style.SUCCESS('Insert Data Sucessfully '))

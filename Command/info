@@ -1,0 +1,351 @@
+[2024-11-23 15:43:50,621: ERROR/MainProcess] Task Home.task.import_data_task[16a3b63f-c3ec-4e22-a929-7bf529a304fe] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\OutPut.csv'
+[2024-11-23 15:43:50,636: ERROR/MainProcess] Task Home.task.import_data_task[91831d98-037a-46d5-8035-9bdbacc310e0] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\employee_100K_KVTWs8X.csv'
+[2024-11-23 15:43:50,652: ERROR/MainProcess] Task Home.task.import_data_task[0cf50afc-58e4-4aa0-ad6a-3563099c3833] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\OutPut_dNXe4Cf.csv'
+[2024-11-23 15:43:50,684: ERROR/MainProcess] Task Home.task.import_data_task[1482bef2-889d-4196-a5ba-1928449b51cf] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\employee_100K_2NZB6L2.csv'
+[2024-11-23 15:43:50,699: ERROR/MainProcess] Task Home.task.import_data_task[44c4f7e5-9c70-4a28-a5a3-638f9ccf1f6a] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\employee_100K_3NcOdbM.csv'
+[2024-11-23 15:43:50,715: ERROR/MainProcess] Task Home.task.import_data_task[cdc03684-6d86-43c8-8e9f-109e76b63b06] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\OutPut_cXRCfni.csv'
+[2024-11-23 15:43:50,731: ERROR/MainProcess] Task Home.task.import_data_task[8dc82da4-4e4b-46b6-90ad-b1e95e47147b] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\OutPut_H4b5ukt.csv'
+[2024-11-23 15:43:50,746: ERROR/MainProcess] Task Home.task.import_data_task[5b777d6a-fc45-452c-b277-982c70ea0bcb] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\OutPut_Z3nWaie.csv'
+[2024-11-23 15:43:50,762: ERROR/MainProcess] Task Home.task.import_data_task[bd78a0a1-2117-4fd3-b253-5f27b59364e2] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\employee_100K_2RDJUxt.csv'
+[2024-11-23 15:43:50,778: ERROR/MainProcess] Task Home.task.import_data_task[410904b6-d5cf-4fc9-a3f9-b7542ad27e84] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\employee_100K_kuZXK9D.csv'
+[2024-11-23 15:43:50,793: ERROR/MainProcess] Task Home.task.import_data_task[d835a0e0-febf-4db7-8db7-2bc6fe70097a] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\employee_100K.csv'
+[2024-11-23 15:43:50,809: ERROR/MainProcess] Task Home.task.import_data_task[0657ae6e-23cb-409d-bb59-0e148a84dc76] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\employee_100K_R8oBqSy.csv'
+[2024-11-23 15:43:50,824: ERROR/MainProcess] Task Home.task.import_data_task[84382012-1e75-423d-9dd5-1d39f55096c2] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\employee_100K_Uditnt1.csv'
+[2024-11-23 15:43:50,824: ERROR/MainProcess] Task Home.task.import_data_task[5955172c-9ad3-495b-8f92-be3d15bea160] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\celery\app\trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 9, in import_data_task
+    raise e
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\task.py", line 7, in import_data_task
+    call_command("importByCSV",absolute_path, model_name)
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\__init__.py", line 194, in call_command
+    return command.execute(*args, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\env\Lib\site-packages\django\core\management\base.py", line 459, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\management\commands\importByCSV.py", line 17, in handle
+    models=check_csv_error(file_path,model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\DJANGO_PR\Comand_In Django\Django-Auto-Staff\Command\Home\utils.py", line 63, in check_csv_error
+    with open(file_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Sk Official\\Desktop\\Comand_In Django\\Command\\media\\Import\\employee_100K_iB1RnPs.csv'
+[2024-11-23 15:46:47,679: WARNING/MainProcess] Insert Data Sucessfully 

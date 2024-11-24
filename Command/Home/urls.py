@@ -1,5 +1,6 @@
 from . import views
 from django.urls import path
 urlpatterns = [
-    path('',views.index,name='Index')
+    path('imports',views.imports,name='Import'),
+    path('export',views.export,name='Export')
 ]
