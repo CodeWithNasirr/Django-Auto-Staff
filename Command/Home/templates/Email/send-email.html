@@ -1,0 +1,67 @@
+{% extends 'Home/base.html'%}
+
+{% block body %}
+
+<div class="container">
+    <h3>Compose an Email</h3>
+    <form action="{% url 'send_email' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="Email-List">Email-List</label>
+            <select name="Email-List" id="" required>
+                <option value="" disabled selected>Select</option>
+                {% for allmodel in allmodels %}
+                <option value="{{allmodel}}">{{allmodel}}</option>
+                {% endfor %}
+            </select>
+        </div> 
+        <div class="form-group">
+            <label for="subject" id="subject">Subject</label>
+            <input type="text" name="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="body" id="body">Body</label>
+            <textarea name="body" id="editor"></textarea required>
+        </div>
+        <div class="form-group">
+        <label for="Attachment" id="Attachment">Attachment</label>
+        <input type="file" name="Attachment" >
+    </div>
+    <button>Submit</button>
+    </form>
+    {% if messages %}
+        <div class="messages"  style="color: rgb(59 171 24); text-align: center;">
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" id="messages">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+</div>
+<script>
+    CKEDITOR.replace('editor');
+</script>
+<script>
+    const successMessage = document.querySelector('.alert');
+    if (successMessage) {
+        // If a success message exists, delay the fade-out by 3 seconds
+        setTimeout(function() {
+            let opacity = 1; // Initial opacity
+            const fadeInterval = setInterval(function() {
+                if (opacity <= 0) {
+                    clearInterval(fadeInterval);
+                    successMessage.style.display = 'none'; // Hide the element after fading out
+                }
+                else {
+                    opacity -= 0.05; // Decrease opacity gradually
+                    successMessage.style.opacity = opacity;
+                }
+            }, 50); // Interval for gradual fade-out
+        }, 3000); // Wait for 3 seconds before starting the fade-out
+    }
+</script>
+
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'Home/css/dash.css' %}">
+    <link rel="stylesheet" href="{% static 'Home/css/email.css' %}">
+    <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
+</head>
+<body>
+    <div class="home">
+        <div class="nav">
+            <h3>Automate With Django</h3>
+            <div class="right">
+                <div class="login">
+                    <a href=""><button class="register">Register</button></a>
+                    <a href=""><button class="sign-in">Login</button></a>
+                </div>
+                <!-- <div class="logout">
+                <h4>logged in as: <span>Djangoadmin</span></h4>
+                <button>logout</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    {% block body %}
+
+    {% endblock %}
+
+</body>
+</html>

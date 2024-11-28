@@ -8,7 +8,19 @@ from Upload.models import upload
 from Home.task import import_data_task ,export_data_task
 from Home.utils import check_csv_error
 
- 
+
+def Dashboard(request):
+    return render(request,'Home/dashboard.html')
+
+
+
+
+
+
+
+
+
+
 def imports(request):
     if request.method == "POST":
         try:

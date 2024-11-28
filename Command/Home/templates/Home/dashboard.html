@@ -1,0 +1,55 @@
+{% extends 'Home/base.html'%}
+{% block title %}Dashboard{% endblock %}
+{% block body %}
+<div class="quote">
+    <h1>Automate The boring stuff with Django</h1>
+</div>
+<div class="main">
+    <div class="row1">
+        <div class="x1">
+            <a href="">
+                <h3>Import Data</h3>
+                <div class="line"></div>
+                <h4>import data from CSV file to any table</h4>
+            </a>
+        </div>
+        <div class="x2">
+            <a href="">
+                <h3>Export Data</h3>
+                <div class="line"></div>
+                <h4>Export data from a specific table to CSV file</h4>
+            </a>
+        </div>
+        <div class="x3">
+            <a href="{% url 'send_email' %}">
+                <h3>Bulk Emails</h3>
+                <div class="line"></div>
+                <h4>Sends bulk emails to users</h4>
+            </a>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="y1">
+            <a href="">
+                <h3>Email Tracking</h3>
+                <div class="line"></div>
+                <h4>Tracks emails and shows open and click rate</h4>
+            </a>
+        </div>
+        <div class="y2">
+            <a href="">
+                <h3>Compress images</h3>
+                <div class="line"></div>
+                <h4>compress images file and reduce the size</h4>
+            </a>
+        </div>
+        <div class="y3">
+            <a href="">
+                <h3>Web scraping</h3>
+                <div class="line"></div>
+                <h4>scraps websites for userful infoemation</h4>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
