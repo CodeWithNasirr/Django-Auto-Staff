@@ -1,0 +1,40 @@
+{% extends 'Home/base.html'%}
+
+{% block body %}
+
+
+<div class="table-container">
+    <div class="heading">
+        <h1>Email Engagement Tracking</h1>
+    </div>
+    <table>
+        
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Subject</th>
+                <th>List</th>
+                <th>Total</th>
+                <th>Events</th>
+                <th>Sent on</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for email in emails %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+               <td ><a href="{% url 'email_statics' email.pk %}">{{email.subject}}</a></td>
+                <td>{{email.email_list}}</td>
+                <td>{{email.total_sent}}</td>
+                <td>
+                    <div>0% Opend</div>
+                    <div>0% Clicked</div>
+                </td>
+                <td>{{email.sent_at}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

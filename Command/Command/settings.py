@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     "anymail",
 ]
 
 MIDDLEWARE = [
@@ -132,10 +133,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL="/media/"
 MEDIA_ROOT=BASE_DIR/'media'
 
-EMAIL_BACKEND = config('EMAIL_BACKEND')
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_PORT = config('EMAIL_PORT',cast=int)
+
+
+
+
+
+ 
+ANYMAIL = {
+    'BREVO_API_KEY':config('BREVO_API_KEY'),
+}
+
+EMAIL_BACKEND = "anymail.backends.brevo.EmailBackend"
 EMAIL_USE_TLS = True
+
+# EMAIL_BACKEND = config('EMAIL_BACKEND')
+# EMAIL_HOST = config('EMAIL_HOST')
+# EMAIL_PORT = config('EMAIL_PORT',cast=int)
+# EMAIL_USE_TLS = True
 EMAIL_HOST_USER=config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL="Automate with Django <skofficial665@gmail.com>"
@@ -145,3 +159,10 @@ DEFAULT_FROM_EMAIL="Automate with Django <skofficial665@gmail.com>"
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
+
+
+CSRF_TRUSTED_ORIGINS = ['https://4ae7-2402-3a80-18ae-4944-c8b8-331d-3c04-dd4c.ngrok-free.app']
+
+BASE_URL = "https://4ae7-2402-3a80-18ae-4944-c8b8-331d-3c04-dd4c.ngrok-free.app/"
+
+

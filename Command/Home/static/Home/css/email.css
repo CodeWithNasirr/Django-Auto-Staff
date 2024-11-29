@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #6495ed57;
-    margin: 0px 400px;
+    margin: 0px 300px;
     padding: 25px 0px;
     border: 1px solid grey;
     border-radius: 2%;
@@ -66,4 +66,65 @@ form button{
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
+}
+
+/* Tracking_dash */
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px; /* Adjust padding for better spacing */
+    /* min-height: 100vh; Ensures full-page centering */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.table-container h1{
+    padding-bottom: 90px;
+}
+.table-container table {
+    width: 80%; /* Restrict table width */
+    max-width: 1200px; /* Prevent it from being too wide */
+    border-collapse: collapse;
+    background-color: #4c4444; /* Dark background for table */
+    color: #ffffff; /* White text for readability */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure proper radius clipping */
+}
+
+.table-container table th,
+.table-container table td {
+    padding: 12px 16px; /* Space inside cells */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add separation lines */
+    font-size: 14px; /* Adjust text size */
+}
+
+.table-container table th {
+    background-color: #333333; /* Darker header background */
+    font-weight: bold; /* Emphasize headers */
+    text-transform: uppercase; /* Add style to headers */
+}
+
+.table-container table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Highlight row on hover */
+}
+
+.table-container .box{
+    width: 80%;
+    border: 1px solid gray;
+    
+}
+.table-container .box .head{
+    display: flex
+    ;
+        justify-content: space-between;
+        line-height: 25px;
+        background-color: #dae0e187;
+        padding: 0 10px;
+}
+.table-container .box .body{
+    padding: 20px 10px;
 }

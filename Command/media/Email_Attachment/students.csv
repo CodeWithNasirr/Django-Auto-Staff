@@ -1,0 +1,10 @@
+employee_id,employee_name,designation,salary,retirement,other_benefits,total_benefits,total_compensation
+37730,Charles Barry,IS Administrator 1,57534.65,11253.16,4532.63,27747.13,85281.78
+26574,Sarah Gonzalez,IS Administrator 3,57678.5,10284.88,4755.14,22216.82,79895.32
+8148,Gary Garcia,IS Trainer-Assistant,63532.93,12495.83,4702.71,30116.78,93649.71
+27436,Lawrence Hayes,IS Business Analyst-Principal,101274.51,19644.45,7458.76,40021.45,134237.37
+37730,Amy Hanson,IS Programmer Analyst,5084,1083.9,387.5,2428.31,7512.31
+36223,Benjamin Lane,IS Prg Analyst-Principal,34456,7346,2579.95,13753.58,48209.58
+51426,Nicole Grimes,IS Project Director,139889,26799.23,9791.54,49509.01,189398.01
+26574,Andrew Reed,IT Operations Support Admin IV,46572,9929.16,3822.28,19492.88,66064.88
+37983,Tiffany Armstrong,Training Officer,84681.53,16661.84,6838.44,36418.52,121100.05

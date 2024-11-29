@@ -16,6 +16,10 @@ body,html{
     justify-content: space-between;
     background-color: #ff8c001f;
 }
+.nav a{
+    text-decoration: none;
+    color: black;
+}
 .nav h3{
     padding: 8px 0px;
     font-weight: 500;

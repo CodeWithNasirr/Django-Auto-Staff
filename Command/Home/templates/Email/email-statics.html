@@ -1,0 +1,40 @@
+{% extends 'Home/base.html'%}
+
+{% block body %}
+
+
+<div class="table-container">
+    <div class="heading">
+        <h1>Email Statistics</h1>
+    </div>
+    <div class="box">
+        <div class="head">
+            <div class="left">
+            {% for sent in sents %}
+            <h5>Total Emails Sent: {{sent.total_sent}}</h5>
+            {% endfor %}
+            <h5>Sent at: {{email.sent_at}}</h5>
+        </div> 
+        <div class="right">
+            <h5>Opened: 0%</h5>
+            <h5>Clicked: 0%</h5>
+        </div>
+        </div>
+        <hr>
+        <div class="body">
+            <h4>{{email.body|safe}}</h4>
+            <br>
+            {% if email.attachment %}
+            <div class="attachment">
+                <img src="{{email.attachment.url}}" alt="Email attachment" width="30%">
+            </div>
+            {% else %}
+            <div class="no-attachment">
+                <p>No attachment</p>
+            </div>
+            {% endif %} 
+        </div>
+    </div>
+</div>
+
+{% endblock %}
