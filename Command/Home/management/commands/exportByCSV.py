@@ -3,7 +3,7 @@ from datetime import datetime
 from django.apps import apps
 import csv
 from Home.utils import generate_csv_file
-class Command(BaseCommand):
+class Command(BaseCommand): 
     def add_arguments(self, parser):
         parser.add_argument('model-name',type=str,help='Get Model Name')
 
@@ -30,6 +30,6 @@ class Command(BaseCommand):
             writer.writerow([field.name for field in models._meta.fields])
 
             for dt in model:
-                writer.writerow([getattr(dt,field.name)for field in models._meta.fields])
+                writer.writerow([getattr(dt,field.name)for field in models._meta.fields])#getattr(obj,attr)
             
         self.stdout.write(self.style.SUCCESS("Data Exported Sucessfully..."))

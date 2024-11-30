@@ -27,14 +27,14 @@
                 <td>{{email.email_list}}</td>
                 <td>{{email.total_sent}}</td>
                 <td>
-                    <div>0% Opend</div>
-                    <div>0% Clicked</div>
+                    <div>{{email.open_rate}}% Opend</div>
+                    <div>{{email.click_rate}}% Clicked</div>
                 </td>
                 <td>{{email.sent_at}}</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-</div>
+</div> 
 
 {% endblock %}

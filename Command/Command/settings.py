@@ -140,7 +140,8 @@ MEDIA_ROOT=BASE_DIR/'media'
 
  
 ANYMAIL = {
-    'BREVO_API_KEY':config('BREVO_API_KEY'),
+    'BREVO_API_KEY': config('BREVO_API_KEY'),
+    'DEBUG_API_REQUESTS': True,  # Enable detailed request/response logging
 }
 
 EMAIL_BACKEND = "anymail.backends.brevo.EmailBackend"
@@ -161,8 +162,8 @@ CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
 
 
-CSRF_TRUSTED_ORIGINS = ['https://4ae7-2402-3a80-18ae-4944-c8b8-331d-3c04-dd4c.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ['https://0760-2402-3a80-18a3-c987-20a4-9c24-404a-9e5c.ngrok-free.app']
 
-BASE_URL = "https://4ae7-2402-3a80-18ae-4944-c8b8-331d-3c04-dd4c.ngrok-free.app/"
+BASE_URL = "https://0760-2402-3a80-18a3-c987-20a4-9c24-404a-9e5c.ngrok-free.app/"
 
 

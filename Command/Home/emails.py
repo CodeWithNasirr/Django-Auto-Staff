@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 
 def send_email(email_recipients, subject, message,attachment=None,email_id=None):
     new_message = message
+    # email=None
     for recipient_email in email_recipients:
         #Create Email Tracking Record
         if email_id:
@@ -55,7 +56,7 @@ def send_email(email_recipients, subject, message,attachment=None,email_id=None)
         mail.send(fail_silently=False)
 
     # Store the total sent emails inside the Sent Model
-    if email:
+    if email_id:
         sent=Sent()
         sent.email=email
         sent.total_sent=email.email_list.count_emails()

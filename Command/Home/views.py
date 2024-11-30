@@ -13,23 +13,14 @@ def Dashboard(request):
     return render(request,'Home/dashboard.html')
 
 
-
-
-
-
-
-
-
-
 def imports(request):
     if request.method == "POST":
         try:
             file_path = request.FILES.get('file_path')
             model_name = request.POST.get('model_name')
-
             if not file_path or not model_name:
                 messages.error(request, 'Please provide both file and model name before submitting.')
-                return redirect("/automate/imports")
+                return redirect("/imports")
 
             with transaction.atomic():
                 # Save uploaded file
@@ -41,17 +32,16 @@ def imports(request):
                     check_csv_error(absolute_path, model_name)
                 except CommandError as e:
                     messages.error(request,str(e))  # Display CommandError message in UI
-                    return redirect("/")
+                    return redirect("/imports")
 
                 # Trigger asynchronous import task
                 import_data_task.delay(absolute_path, model_name)
                 messages.success(request, "Your data is being imported. You will be notified once it's done.")
-                return redirect("/automate/imports")
+                return redirect("/imports")
 
         except Exception as e:
             messages.error(request, f"An unexpected error occurred: {str(e)}")
             return redirect("/automate/imports")
-
     # Display all available models
     allmodels = get_all_models()
     context = {'allmodels': allmodels}
@@ -70,6 +60,6 @@ def export(request):
             messages.success(request, "Your data is being Exported. You will be notified once it's done.")
         except Exception as e:
             raise e
-    allmodels=get_all_models()
+    allmodels=get_all_models() 
     context={'allmodels':allmodels}
     return render(request,"Home/export.html",context)
