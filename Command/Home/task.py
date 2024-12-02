@@ -5,7 +5,7 @@ from datetime import datetime
 from Home.utils import generate_csv_file
 from django.apps import apps
 @shared_task
-def import_data_task(absolute_path, model_name):
+def import_data_task(absolute_path, model_name): 
     try: 
         call_command("importByCSV",absolute_path, model_name)
     except Exception as e:

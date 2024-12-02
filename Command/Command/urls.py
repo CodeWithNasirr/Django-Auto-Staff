@@ -18,8 +18,23 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
+from django.shortcuts import render,redirect
+from django.contrib.auth import views as auth_views
+from django.contrib.auth import logout
+from Home import views as app_views
+
+def custom_logout(request):
+    logout(request)
+    return redirect('logout_success')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("Home.urls")),
-    path('email/',include('Email.urls'))
+    path('email/',include('Email.urls')),
+    path('register',app_views.Register,name='Register'),
+    path('login',auth_views.LoginView.as_view(template_name='Home/login.html'),name='login'),
+    path('logout',custom_logout,name='logout'),
+    path('logout-success',auth_views.TemplateView.as_view(template_name='Home/logout.html'), name='logout_success'),
+
+
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

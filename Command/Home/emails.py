@@ -42,8 +42,8 @@ def send_email(email_recipients, subject, message,attachment=None,email_id=None)
                 print("No Url Found In The Email Content ")
             
             open_tracking_img = f"<img src='{open_tracking_url}' width='1' height='1' style='display:none;' >"
-
-            if not message.strip():
+ 
+            if not message.strip(): 
                 new_message = f"<p>This is a system-generated email.</p>{open_tracking_img}"
             else:
                 new_message += open_tracking_img
@@ -61,4 +61,3 @@ def send_email(email_recipients, subject, message,attachment=None,email_id=None)
         sent.email=email
         sent.total_sent=email.email_list.count_emails()
         sent.save()
-        

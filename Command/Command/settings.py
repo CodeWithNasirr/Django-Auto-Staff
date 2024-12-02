@@ -167,3 +167,5 @@ CSRF_TRUSTED_ORIGINS = ['https://0760-2402-3a80-18a3-c987-20a4-9c24-404a-9e5c.ng
 BASE_URL = "https://0760-2402-3a80-18a3-c987-20a4-9c24-404a-9e5c.ngrok-free.app/"
 
 
+LOGIN_REDIRECT_URL='/'
+LOGIN_URL='login'

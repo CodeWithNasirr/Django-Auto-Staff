@@ -20,7 +20,7 @@ class Command(BaseCommand):
         
         with open(file_path,'r')as f:
             reader=csv.DictReader(f)
-            for row in reader:
+            for row in reader: 
                 # data={key:value for key,value in row.items() if key in model_field}
                 models.objects.create(**row)
                 # models.objects.all().delete()

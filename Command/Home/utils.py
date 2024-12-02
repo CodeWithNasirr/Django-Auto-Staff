@@ -66,7 +66,7 @@ def check_csv_error(file_path, model):
             reader = csv.DictReader(f)
             # Extract the headers from the CSV file, stripping any extra spaces
             csv_header = [header.strip() for header in reader.fieldnames]
-            # print(csv_header)
+            # print(csv_header) 
 
             # Compare CSV headers with model fields
             if csv_header != model_field:

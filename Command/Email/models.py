@@ -5,13 +5,13 @@ import uuid
 class List(models.Model):
     email_list=models.CharField(max_length=50)
     def __str__(self):
-        return self.email_list
+        return self.email_list 
     
     def count_emails(self):
         count=Subsciber.objects.filter(email_list=self).count()
         return count
     
-
+ 
 class Subsciber(models.Model):
     email_list=models.ForeignKey(List,on_delete=models.CASCADE,null=True,blank=True)
     email_adress=models.EmailField(max_length=50)

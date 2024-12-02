@@ -5,11 +5,12 @@ from Email.task import send_email_task
 from django.db.models import Sum
 from django.utils import timezone
 def send_emails(request):
-    if request.method=="POST":
+    if request.method=="POST": 
         Email_list=request.POST.get('Email-List')
         subject=request.POST.get('subject')
         body=request.POST.get('body')
         file_path = request.FILES.get('Attachment')
+        
         list_instance, created = List.objects.get_or_create(email_list=Email_list)
         email=Email(email_list=list_instance,subject=subject,body=body)
         if file_path:
