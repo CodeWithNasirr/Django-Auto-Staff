@@ -14,15 +14,15 @@ def get_all_models():
         list: A list of custom model names (strings).
     """
     default_models = ["LogEntry", "Permission", "Group", "User", "ContentType", "Session", "upload"]
-    custom_models = []
-
-    # Iterate through all models in the project
+    custom_models=[]
     for model in apps.get_models():
-        # Exclude default models
-        if model.__name__ not in default_models:
-            custom_models.append(model.__name__)
-    
+        try:
+            if model.__name__ not in default_models:
+                custom_models.append(model.__name__)
+        except LookupError:
+            break
     return custom_models
+        
 
 
 # Function to check CSV file for errors based on the model structure
@@ -42,7 +42,6 @@ def check_csv_error(file_path, model):
         models.Model: The matched Django model.
     """
     models = None
-
     # Iterate through all app configurations to find the specified model
     for app_config in apps.get_app_configs():
         try:
@@ -59,6 +58,7 @@ def check_csv_error(file_path, model):
     
     # Extract field names from the model, excluding the 'id' field
     model_field = [field.name for field in models._meta.fields if field.name != 'id']
+
     # print(F"Model_field- {model_field}")
     try:
         # Open the CSV file for reading

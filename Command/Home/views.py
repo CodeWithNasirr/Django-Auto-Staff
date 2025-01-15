@@ -7,7 +7,7 @@ from django.core.mail import send_mail
 from Upload.models import upload
 from Home.task import import_data_task ,export_data_task
 from Home.utils import check_csv_error
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User 
 from django.contrib.auth.decorators import login_required
 
 def Register(request):
@@ -53,7 +53,7 @@ def imports(request):
                 absolute_path = uploaded.file.path
 
                 # Validate CSV file against the model
-                try:
+                try: 
                     check_csv_error(absolute_path, model_name)
                 except CommandError as e:
                     messages.error(request,str(e))  # Display CommandError message in UI

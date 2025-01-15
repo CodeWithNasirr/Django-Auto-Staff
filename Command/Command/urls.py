@@ -24,7 +24,7 @@ from django.contrib.auth import logout
 from Home import views as app_views
 
 def custom_logout(request):
-    logout(request)
+    logout(request) 
     return redirect('logout_success')
 
 urlpatterns = [

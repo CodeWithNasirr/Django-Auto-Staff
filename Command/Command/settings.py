@@ -162,9 +162,9 @@ CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
 
 
-CSRF_TRUSTED_ORIGINS = ['https://0760-2402-3a80-18a3-c987-20a4-9c24-404a-9e5c.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ['https://7ea8-2401-4900-18ea-62c3-458e-59e6-cda6-d1f3.ngrok-free.app']
 
-BASE_URL = "https://0760-2402-3a80-18a3-c987-20a4-9c24-404a-9e5c.ngrok-free.app/"
+BASE_URL = "https://7ea8-2401-4900-18ea-62c3-458e-59e6-cda6-d1f3.ngrok-free.app/"
 
 
 LOGIN_REDIRECT_URL='/'

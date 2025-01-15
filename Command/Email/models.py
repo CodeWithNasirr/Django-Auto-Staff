@@ -9,7 +9,7 @@ class List(models.Model):
     
     def count_emails(self):
         count=Subsciber.objects.filter(email_list=self).count()
-        return count
+        return count 
     
  
 class Subsciber(models.Model):

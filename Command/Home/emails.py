@@ -13,7 +13,7 @@ def send_email(email_recipients, subject, message,attachment=None,email_id=None)
     for recipient_email in email_recipients:
         #Create Email Tracking Record
         if email_id:
-            email=Email.objects.get(pk=email_id)
+            email=Email.objects.get(pk=email_id) 
             subscriber=Subsciber.objects.get(email_list=email.email_list,email_adress=recipient_email)
             unique_id=str(uuid.uuid4()).split("-")[0]
             email_tracking = Email_Tracking.objects.create(

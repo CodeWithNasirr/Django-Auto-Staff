@@ -3,8 +3,8 @@ from Email.models import List,Email,Subsciber,Sent,Email_Tracking
 from django.contrib import messages
 from Email.task import send_email_task
 from django.db.models import Sum
-from django.utils import timezone
-def send_emails(request):
+from django.utils import timezone 
+def send_emails(request): 
     if request.method=="POST": 
         Email_list=request.POST.get('Email-List')
         subject=request.POST.get('subject')
