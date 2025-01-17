@@ -4,7 +4,7 @@ from django.apps import apps
 from Home.models import Student
 from django.contrib import messages
 from Home.utils import check_csv_error
-class Command(BaseCommand):  
+class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('file_path',type=str,help="Path to Csv File ")
         parser.add_argument('model_name',type=str,help="Path to Csv File ")

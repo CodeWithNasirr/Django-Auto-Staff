@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 
 def send_email(email_recipients, subject, message,attachment=None,email_id=None):
-    new_message = message
+    new_message = message 
     # email=None
     for recipient_email in email_recipients:
         #Create Email Tracking Record

@@ -6,4 +6,4 @@ urlpatterns = [
     path('track/stats/<int:pk>/',views.email_statics,name='email_statics'),
     path('track/click/<unique_id>/',views.track_click,name='track_click'),
     path('track/open/<unique_id>/',views.track_open,name='track_open'),
-]  
+]

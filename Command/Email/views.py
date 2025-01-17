@@ -3,7 +3,7 @@ from Email.models import List,Email,Subsciber,Sent,Email_Tracking
 from django.contrib import messages
 from Email.task import send_email_task
 from django.db.models import Sum
-from django.utils import timezone 
+from django.utils import timezone  
 def send_emails(request): 
     if request.method=="POST": 
         Email_list=request.POST.get('Email-List')
@@ -13,6 +13,7 @@ def send_emails(request):
         
         list_instance, created = List.objects.get_or_create(email_list=Email_list)
         email=Email(email_list=list_instance,subject=subject,body=body)
+
         if file_path:
             email.attachment=file_path
         email.save()
@@ -59,8 +60,6 @@ def track_click(request,unique_id):
     try:
         email_tracking=Email_Tracking.objects.get(unique_id=unique_id)
         url=request.GET.get('url')
-        print(url)
-        
         if not email_tracking.click_at:
             email_tracking.click_at=timezone.now()
             email_tracking.save()

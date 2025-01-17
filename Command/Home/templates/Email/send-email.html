@@ -7,7 +7,7 @@
     <form action="{% url 'send_email' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
-            <label for="Email-List">Email-List</label>
+            <label for="Email-List">Email-List</label> 
             <select name="Email-List" id="" required>
                 <option value="" disabled selected>Select</option>
                 {% for allmodel in allmodels %}

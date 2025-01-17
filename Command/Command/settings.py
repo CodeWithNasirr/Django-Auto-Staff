@@ -139,22 +139,21 @@ MEDIA_ROOT=BASE_DIR/'media'
 
 
  
-ANYMAIL = {
-    'BREVO_API_KEY': config('BREVO_API_KEY'),
-    'DEBUG_API_REQUESTS': True,  # Enable detailed request/response logging
-}
+# ANYMAIL = {
+#     'BREVO_API_KEY': config('BREVO_API_KEY'),
+#     'DEBUG_API_REQUESTS': True,  # Enable detailed request/response logging
+# }
 
-EMAIL_BACKEND = "anymail.backends.brevo.EmailBackend"
-EMAIL_USE_TLS = True
-
-# EMAIL_BACKEND = config('EMAIL_BACKEND')
-# EMAIL_HOST = config('EMAIL_HOST')
-# EMAIL_PORT = config('EMAIL_PORT',cast=int)
+# EMAIL_BACKEND = "anymail.backends.brevo.EmailBackend"
 # EMAIL_USE_TLS = True
+
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT',cast=int)
+EMAIL_USE_TLS = True
 EMAIL_HOST_USER=config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL="Automate with Django <skofficial665@gmail.com>"
-
 
 
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
@@ -162,9 +161,9 @@ CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
 
 
-CSRF_TRUSTED_ORIGINS = ['https://7ea8-2401-4900-18ea-62c3-458e-59e6-cda6-d1f3.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ['https://17c7-2402-3a80-18a5-a08e-7405-84fb-f866-fea6.ngrok-free.app']
 
-BASE_URL = "https://7ea8-2401-4900-18ea-62c3-458e-59e6-cda6-d1f3.ngrok-free.app/"
+BASE_URL = "https://17c7-2402-3a80-18a5-a08e-7405-84fb-f866-fea6.ngrok-free.app/"
 
 
 LOGIN_REDIRECT_URL='/'
