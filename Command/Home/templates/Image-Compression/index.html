@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Messaging UI</title>
+    <link rel="stylesheet" href="{% static 'Home/css/api.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WhatsApp Messaging Tool</h1>
+        </header>
+
+        <main>
+            <!-- Template Section -->
+            <section class="template-section">
+                <h2>Create Template</h2>
+                <form id="template-form">
+                    <label for="template-name">Template Name:</label>
+                    <input type="text" id="template-name" placeholder="Enter template name" required>
+
+                    <label for="template-content">Message Content:</label>
+                    <textarea id="template-content" placeholder="Write your message..." required></textarea>
+
+                    <button type="submit">Save Template</button>
+                </form>
+            </section>
+
+            <!-- Recipient Section -->
+            <section class="recipients-section">
+                <h2>Manage Recipients</h2>
+                <form id="recipients-form">
+                    <label for="recipients-input">Add Recipients (comma-separated):</label>
+                    <input type="text" id="recipients-input" placeholder="e.g., 918123456789,919876543210" required>
+                    <button type="button" id="add-recipients">Add Recipients</button>
+                </form>
+
+                <ul id="recipients-list">
+                    <!-- Recipients will be dynamically added here -->
+                </ul>
+            </section>
+
+            <!-- Send Section -->
+            <section class="send-section">
+                <h2>Send Messages</h2>
+                <button id="send-messages">Send to All</button>
+                <div id="status">
+                    <!-- Message status will be shown here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by Django + WhatsApp API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
