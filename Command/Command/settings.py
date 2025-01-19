@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    "IMG_Compress",
     "Email",
     "Home",
     "Upload",

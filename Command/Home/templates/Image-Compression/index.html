@@ -31,16 +31,15 @@
             <!-- Recipient Section -->
             <section class="recipients-section">
                 <h2>Manage Recipients</h2>
-                <form id="recipients-form">
-                    <label for="recipients-input">Add Recipients (comma-separated):</label>
-                    <input type="text" id="recipients-input" placeholder="e.g., 918123456789,919876543210" required>
-                    <button type="button" id="add-recipients">Add Recipients</button>
-                </form>
-
+                <button id="select-all">Select All</button>
+                <button id="send-messages">Send to Selected</button>
+            
                 <ul id="recipients-list">
                     <!-- Recipients will be dynamically added here -->
                 </ul>
             </section>
+        
+            
 
             <!-- Send Section -->
             <section class="send-section">
@@ -58,5 +57,50 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Fetch recipients from the backend
+        fetch('/get-recipients')
+            .then(response => response.json())
+            .then(data => {
+                const recipientsList = document.getElementById('recipients-list');
+                data.recipients.forEach(phone => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<input type="checkbox" class="recipient-checkbox" value="${phone}"> ${phone}`;
+                    recipientsList.appendChild(li);
+                });
+            });
+    
+        // Select all recipients
+        document.getElementById('select-all').addEventListener('click', () => {
+            const checkboxes = document.querySelectorAll('.recipient-checkbox');
+            checkboxes.forEach(checkbox => checkbox.checked = true);
+        });
+    
+        // Send messages to selected recipients
+        document.getElementById('send-messages').addEventListener('click', () => {
+            const selectedRecipients = Array.from(document.querySelectorAll('.recipient-checkbox:checked'))
+                .map(checkbox => checkbox.value);
+            
+            if (selectedRecipients.length > 0) {
+                // Send the selected recipients to the backend for WhatsApp API
+                fetch('/send-whatsapp-messages', {
+                    method: 'POST',
+                    body: JSON.stringify({ recipients: selectedRecipients }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Messages sent successfully!');
+                })
+                .catch(error => {
+                    alert('Error sending messages');
+                });
+            } else {
+                alert('No recipients selected');
+            }
+        });
+    </script>
 </body>
 </html>

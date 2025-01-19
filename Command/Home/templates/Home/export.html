@@ -6,7 +6,7 @@
     <form action="{% url 'Export' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
         <div class="form-group">
             <label for="model_name">Select DataBase Table</label>
-            <select name="model_name" class="form-control">
+            <select name="model_name" class="form-control" required>
                 <option value="" disabled selected>Select</option>
                 {% for allmodel in allmodels %}
                 <option value="{{allmodel}}">{{allmodel}}</option>

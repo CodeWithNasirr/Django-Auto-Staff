@@ -1,6 +1,5 @@
 .container{
-    display: flex
-;
+    display: flex;
     align-items: center;
     flex-direction: column;
     background-color: #6495ed57;
@@ -16,6 +15,7 @@
 .container form label{
     font-size: 18px;
 }
+
 .container form select{
     width: 100%;
     padding: 10px 5px;
